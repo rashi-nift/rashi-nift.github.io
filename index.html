@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Shreemulam</title>
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <style type="text/css">
+    body {
+      width: 100%;
+    }
+
+    #header {
+      top: 0;
+      height: 85px;
+      width: 100%;
+      position: fixed;
+      background-color: #000;
+      color: #fff;
+      z-index:1;
+      overflow:hidden;
+    }
+
+    #logo{
+      display: inline-block;
+    }
+
+    #logo img {
+      background-color:#fff;
+      width:120px;
+      margin-top:-48px;     
+    }
+
+    #menu {
+      display: inline-block;
+      margin-left: 100px;
+      height: 85px;
+      vertical-align: middle;
+      margin-top: 25px;
+    }
+
+    .menu-item {
+      display: inline-block;
+      font-size: 20px;
+      margin-right: 35px;
+      cursor: pointer;
+    }
+
+    .menu-item:hover {
+      border-bottom: 3px solid #fe525b;
+      color: #fe525b;
+    }
+
+    #home {
+      height: 700px;
+      overflow: hidden;
+      margin-top: 85px;
+    }
+
+    #home-image {
+      display: inline-block;
+      width: 50%;
+    }
+
+    #home-image-img {
+      height: 1100px;
+      position: relative;
+      top: -400px;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      background-image: url("img/MAin landing page photo.jpg");
+    }
+
+    #home-text {
+      display: inline-block;
+      width: 50%;
+      float:right;
+      height: 100%;
+      background-color: #232323;
+      font-size: 72px;
+      margin: auto;
+      color: #fff;  
+      padding: 50px;
+      padding-top: 170px;
+    }
+
+    #home-text div {
+      color: #fe525b;
+    }
+
+    #blink {
+      display:inline-block;
+    }
+
+    #blinker{
+      display: inline-block;
+    }
+
+    #about, #gallery #title {
+      font-size: 36px;
+      text-align: center;
+      margin: 30px;
+    }
+
+    #about-text {
+      font-size: 24px;
+      margin:15px;
+      text-align: justify;
+    }
+
+    .item img{
+      margin: auto;
+    }
+
+    #contact{
+      background-color: #232323;
+      color: #fff;
+    }
+
+    #contact-title {
+      font-size: 36px;
+      text-align: center;
+      padding: 30px;
+    }
+
+    #contact-details {
+      font-size: 24px;
+      text-align: center;
+      padding-bottom: 50px;
+    }
+
+    #contact-details img {
+      height: 35px;
+      width: 35px;
+      margin-right: 20px;
+    } 
+
+    #contact-details a {
+      color: #fff;
+    }
+
+    #contact-details a:visited {
+      text-decoration: none;
+    }    
+
+    .item img {
+      max-height: 600px;
+    }
+
+    .carousel-caption {
+      font-size:24px;
+      color:#fff;
+    }
+  </style>
+
+  <div id="app">
+    <div id="header">
+      <div id="logo"><img src="img/Brand logo.png"/></div>
+      <div id="menu">
+        <div class="menu-item" onclick="navigateTo(1)">Home</div>
+        <div class="menu-item" onclick="navigateTo(2)">About</div>
+        <div class="menu-item" onclick="navigateTo(3)">Gallery</div>
+        <div class="menu-item" onclick="navigateTo(4)">Contact</div>
+      </div>
+    </div>
+
+    <div id="home">
+      <div id="home-image"><div id="home-image-img"></div></div>
+      <div id="home-text">
+        Dress up the 
+        <br/> 
+        <div id="blink">#</div>
+        <div id="blinker">|</div> <br/> 
+        in you
+      </div>
+    </div>
+
+    <div id="about">
+      <div id="about-header">About us</div>
+      <div id="about-text">
+        Narayanpet is a quintessential town and the district headquarters of Narayanpet district of the Indian state of Telangana, located 167 kms away from the capital, Hyderabad. A small town with the population of 50,000 people, it is known as the land of cotton and silk handloom sarees.<br /><br />
+
+ Known for their affordability, durability, low maintenance, simplicity and light weight nature, their borders and pallus are traditional and are characterised by a rich pallu with a unique pattern of alternating red and white bands. The borders are usually a flat expanse of deep maroon or chocolate red thinly separated by white or coloured lines. Narayanpet sarees are regarded as the garment of the Gods. These magnificent sarees enjoyed the royal patronage of the Marathas and were donned exclusively by the aristocrats.<br /><br />
+
+Shreemulam was launched to prevent the dying craft of handloom sarees and to support the artisans who are surviving on meagre wages. The sarees made in the town are generally bought by the local population or sent to the nearby towns and cities for sale, and are sold at higher prices than they were purchased from the weavers, resulting in their loss. 
+      </div>
+    </div>
+
+    <div id="gallery">
+    <div id="title">Gallery</div>  
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active"><img src="img/A simple border being weaved (1).jpg"><div class="carousel-caption">A simple border being weaved</div></div>
+        <div class="item"><img src="img/A weaver weaving a silk saree (1).jpg"><div class="carousel-caption">A weaver weaving a silk saree</div></div>
+        <div class="item"><img src="img/A weaver weving a cotton saree (1).jpg"><div class="carousel-caption">A weaver weving a cotton saree</div></div>
+        <div class="item"><img src="img/A woman spinning the yarns to make it into a thread.jpg"><div class="carousel-caption">A woman spinning the yarns to make it into a thread</div></div>
+        <div class="item"><img src="img/Checked cotton saree.jpg"><div class="carousel-caption">Checked cotton saree</div></div>
+        <div class="item"><img src="img/Checked rudraksh motif saree.jpg"><div class="carousel-caption">Checked rudraksh motif saree</div></div>
+        <div class="item"><img src="img/Closeup of a weaver on a loom.jpg"><div class="carousel-caption">Closeup of a weaver on a loom</div></div>
+        <div class="item"><img src="img/Colourful rudraksh motif saree.jpg"><div class="carousel-caption">Colourful rudraksh motif saree</div></div>
+        <div class="item"><img src="img/Colourful temple motif saree.jpg"><div class="carousel-caption">Colourful temple motif saree</div></div>
+        <div class="item"><img src="img/Dyeing of the yarns.jpg"><div class="carousel-caption">Dyeing of the yarns</div></div>
+        <div class="item"><img src="img/Ladies going by their normal day.jpg"><div class="carousel-caption">Ladies going by their normal day</div></div>
+        <div class="item"><img src="img/Local kids playing (2).jpg"><div class="carousel-caption">Local kids playing</div></div>
+        <div class="item"><img src="img/Local kids playing.jpg"><div class="carousel-caption">Local kids playing</div></div>
+        <div class="item"><img src="img/Narayanpet bath.jpg"><div class="carousel-caption">Narayanpet bath</div></div>
+        <div class="item"><img src="img/Narayanpet railway station.jpg"><div class="carousel-caption">Narayanpet railway station</div></div>
+        <div class="item"><img src="img/Raw materials (2).jpg"><div class="carousel-caption">Raw materials</div></div>
+        <div class="item"><img src="img/Raw materials.jpg"><div class="carousel-caption">Raw materials</div></div>
+        <div class="item"><img src="img/Saree with rudraksh motif.jpg"><div class="carousel-caption">Saree with rudraksh motif</div></div>
+        <div class="item"><img src="img/Sarees with temple motif.jpg"><div class="carousel-caption">Sarees with temple motif</div></div>
+        <div class="item"><img src="img/The weaver_s studio in Narayanpet.jpg"><div class="carousel-caption">The weaver's studio in Narayanpet</div></div>
+        <div class="item"><img src="img/Traditional silk saree.jpg"><div class="carousel-caption">Traditional silk saree</div></div>
+        <div class="item"><img src="img/woman on a loom with all the warps and wefts.jpg"><div class="carousel-caption">woman on a loom with all the warps and wefts</div></div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    </div>
+
+    <div id="contact">
+      <div id="contact-title">Contact</div>
+      <div id="contact-details">
+        <a href="mailto:contactus@shreemulam.in"><img src="https://img.icons8.com/dusk/64/000000/send-mass-email.png"/>contactus@shreemulam.in <br /></a>
+        <a href="tel:+91 9841 374 917"><img src="https://img.icons8.com/dusk/64/000000/phone-disconnected.png"/>+91 9841 374 917 <br /><br /></a>
+        Road number 12,<br /> 
+        Ground floor, <br />
+        Near city centre mall, <br />
+        Banjara hills, <br />
+        Hyderabad - 500034
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    var list = ["#W", "#Wo", "#Wom", "#Woma", "#Woman","#Woman","#Woman","#Woman","#Woman","#Woman","#Woman","#Woman","#Woman","#Woman","#Woman",
+      "#L", "#La", "#Lad", "#Lady","#Lady","#Lady","#Lady","#Lady","#Lady","#Lady","#Lady","#Lady","#Lady","#Lady",
+      "#G", "#Go", "#God", "#Godd", "#Godde", "#Goddes", "#Goddess", "#Goddess", "#Goddess", "#Goddess", "#Goddess", "#Goddess", "#Goddess", "#Goddess", "#Goddess","#Goddess", "#Goddess"];
+    var counter =0;
+
+    setInterval(function(){
+      document.getElementById("blink").innerText=list[counter %list.length];
+      counter++;
+    }, 200);
+
+    setInterval(function(){
+      if (document.getElementById("blinker").style.display === "none") {
+        document.getElementById("blinker").style.display = "inline-block";
+      } else {
+        document.getElementById("blinker").style.display = "none";
+      }
+    }, 500);
+
+    function navigateTo (i) {
+      switch(i) {
+        case 1:
+          document.getElementById("home").scrollIntoView(false);
+          break;
+        case 2:
+          document.getElementById("about").scrollIntoView(false);
+          break;
+        case 3:
+          document.getElementById("gallery").scrollIntoView(false);
+          break;
+        case 4:
+          document.getElementById("contact").scrollIntoView(false);
+          break;                              
+      }
+    }
+
+  </script>
+</body>
+</html>
